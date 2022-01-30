@@ -14,8 +14,8 @@ def arithmetic_arranger(problems, *args):
       return "Error: Numbers cannot be more than four digits."
 
     try:
-      value_1 = int(operation[0])
-      value_2 = int(operation[2])
+      operand_1 = int(operation[0])
+      operand_2 = int(operation[2])
     except ValueError:
       return "Error: Numbers must only contain digits."
 
@@ -41,7 +41,7 @@ def arithmetic_arranger(problems, *args):
     except IndexError:
       arranged_problems.append(L3)
 
-    answer = int(operation[0]) + int(operation[2]) if operation[1] == '+' else int(operation[0]) - int(operation[2])
+    answer = operand_1 + operand_2 if operation[1] == '+' else operand_1 - operand_2
     L4 = f"{str(answer):>{width}}"
     
     if args:
